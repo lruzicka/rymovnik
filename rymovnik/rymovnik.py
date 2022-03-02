@@ -33,9 +33,14 @@ class Slovnik:
     """ Reprezentuje slovník českých slov. """
     def __init__(self):
         """ Načte slovník z externího souboru a připraví jej jako seznam slov. """
+        # Načti obsah přibaleného souboru s daty.
         soubor = pkgutil.get_data('rymovnik','slovnik.dic')
-        with open(soubor, "r") as slovnik:
-            data = slovnik.readlines()
+        # Dekóduj binární string na normální string, přičemž na konci
+        # řádků vzniknou symboly \r a \n
+        soubor = soubor.decode("utf-8")
+        # Rozděl jednotlivé řádky podle \r
+        data = soubor.split('\r')
+        # Projdi data a očisti je od bílých symbolů
         ocistena_data = [radek.strip() for radek in data]
         self.slovnik = ocistena_data
         
