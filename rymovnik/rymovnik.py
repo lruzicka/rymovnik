@@ -82,7 +82,9 @@ class Tiskarna:
         print(f"================ Nalezeno {pocet} vyhovujících slov. ================== ")
         for z in zaznamy:
             print(z)
+        
         print("--------------------- Konec ---------------------------")
+
 
 def main():
     """ Provádí hlavní tělo programu.  """
