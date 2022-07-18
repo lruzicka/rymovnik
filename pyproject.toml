@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "rymovnik"
-version = "0.9.5"
+version = "0.9.6"
 description = "A simple script to search for words in the dictionary based on criteria."
 authors = ["Lukáš Růžička <lruzicka@redhat.com>"]
 license = "GPL 3.0"
